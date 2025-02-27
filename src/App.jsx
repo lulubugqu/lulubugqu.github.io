@@ -2,6 +2,13 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 
+import icon1 from "./assets/images/file1-a.png"
+import icon2 from "./assets/images/file2-a.png"
+import icon3 from "./assets/images/gh-a.png"
+import icon4 from "./assets/images/mail-a.png"
+import icon5 from "./assets/images/pdf-a.png"
+
+
 // stylesheet
 import "./App.css"
 // fonts
@@ -11,8 +18,7 @@ const active ="rounded-md icon-highlight border border-transparent border border
 const inactive = "rounded-md icon-highlight border border-transparent" 
 // selected == 1 ? active : inactive
 function App() {
-  const [count, setCount] = useState(0)
-
+//   const [count, setCount] = useState(0)
   const [selected, setSelected] = useState(0);
   const handleClick = (divNum) => () => {
 	console.log(divNum + " is active")
@@ -26,31 +32,37 @@ function App() {
 				<div className='directories basis-1/12 flex flex-col absolute left-3 top-4'>
 					<div className={selected == 1 ? active : inactive}
 						onClick={handleClick(1)}>
-						<div className="icon bg-[url('./src/img/file1-a.png')] hover:bg-[url('./src/img/file1-b.png')] bg-cover w-24 h-24"></div>
+						{/* <div className="icon bg-file1a hover:bg-[url('./src/img/file1-b.png')] bg-cover w-24 h-24"></div> */}
+						<img className='icon' id="icon1" src={icon1} alt="" />
+
 						<p>Projects</p>
 					</div>
 
 					<div className={selected == 2 ? active : inactive}
 						onClick={handleClick(2)}>
-						<div className="icon bg-[url('./src/img/file2-a.png')] hover:bg-[url('./src/img/file2-b.png')] bg-cover w-24 h-24"></div>
+						{/* <div className="icon bg-[url('./src/assets/images/file2-a.png')] hover:bg-[url('./src/img/file2-b.png')] bg-cover w-24 h-24"></div> */}
+						<img className='icon' id="icon2" src={icon2} alt="" />
 						<p>Experience</p>
 					</div>
 
 					<div className={selected == 3 ? active : inactive}
 						onClick={handleClick(3)}>
-						<div className="icon bg-[url('./src/img/gh-a.png')] hover:bg-[url('./src/img/gh-b.png')] bg-cover w-24 h-24"></div>
+						{/* <div className="icon bg-[url('./src/img/gh-a.png')] hover:bg-[url('./src/img/gh-b.png')] bg-cover w-24 h-24"></div> */}
+						<img className='icon' id="icon3" src={icon3} alt="" />
 						<p>GitHub</p>
 					</div>
 
 					<div className={selected == 4 ? active : inactive}
 						onClick={handleClick(4)}>
-						<div className="icon bg-[url('./src/img/pdf-a.png')] hover:bg-[url('./src/img/pdf-b.png')] bg-cover w-24 h-24"></div>
+						{/* <div className="icon bg-[url('./src/img/pdf-a.png')] hover:bg-[url('./src/img/pdf-b.png')] bg-cover w-24 h-24"></div> */}
+						<img className='icon' id="icon4" src={icon4} alt="" />
 						<p>Resume</p>
 					</div>
 
 					<div className={selected == 5 ? active : inactive}
 						onClick={handleClick(5)}>
-						<div className="icon bg-[url('./src/img/mail-a.png')] hover:bg-[url('./src/img/mail-b.png')] bg-cover w-24 h-24"></div>
+						{/* <div className="icon bg-[url('./src/img/mail-a.png')] hover:bg-[url('./src/img/mail-b.png')] bg-cover w-24 h-24"></div> */}
+						<img className='icon' id="icon5" src={icon5} alt="" />
 						<p>Email</p>
 					</div>
 			

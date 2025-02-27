@@ -15,8 +15,23 @@
 }
 .whole-page .icon { 
   cursor: pointer; 
+  height: 97px;
 }
-
+#icon1:hover {
+  content: url('./assets/images/file1-b.png');
+}
+#icon2:hover {
+  content: url('./assets/images/file2-b.png');
+}
+#icon3:hover {
+  content: url('./assets/images/gh-b.png');
+}
+#icon4:hover {
+  content: url('./assets/images/mail-b.png');
+}
+#icon5:hover {
+  content: url('./assets/images/pdf-b.png');
+}
 @layer base {
   html {
     width: 100%;
